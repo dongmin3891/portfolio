@@ -71,7 +71,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -359,4 +359,38 @@ p {
   width: 400px;
   height: 400px;
   margin: 30px;
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-pink);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.blog {
+  width: 45px;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+  animation: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
+}
+.contact__links img:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
 }
