@@ -343,3 +343,20 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
+
+/* certificate */
+#certificates {
+  background-color: var(--color-light-white);
+}
+.certificates {
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.certificate__image {
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+}
