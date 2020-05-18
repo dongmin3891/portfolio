@@ -29,13 +29,29 @@ homeContact.addEventListener("click", (event) => {
   scrollIntoView("#contact");
 });
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
 // home에서 벗어날 시 home 점점 투명
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+//Up 버튼 스크롤 할 때 생겼다가 없어졌다가
+
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+//arrow up 버튼 클릭 동작
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
