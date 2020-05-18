@@ -62,6 +62,14 @@ workBtnContainer.addEventListener("click", (e) => {
     return;
   }
 
+  //버튼 셀렉션 옮기기
+  const active = document.querySelector(".category__btn.selected");
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+
+  e.target.classList.add("selected");
+
   projectContainer.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((project) => {
