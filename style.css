@@ -103,7 +103,8 @@ p {
   background-color: var(--color-pink);
   align-items: center;
   color: var(--color-white);
-  padding: 13px;
+  padding: 8px;
+
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
@@ -111,7 +112,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-pink);
-  padding: 13px;
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -176,7 +177,7 @@ p {
 
 /* Section common  */
 .section {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
   margin: auto;
 }
@@ -460,8 +461,8 @@ p {
   }
   .navbar__toggle-btn {
     display: block;
-    top: 16px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
     font-size: var(--font-medium);
   }
 
