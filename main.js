@@ -23,6 +23,12 @@ navbarMenu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
+//Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+});
+
 //Home의 contact me 버튼 클릭시 contact로 이동
 const homeContact = document.querySelector(".home__contact");
 homeContact.addEventListener("click", (event) => {
