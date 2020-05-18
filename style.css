@@ -62,6 +62,10 @@ button {
   border: none;
   outline: none;
 }
+button:hover {
+  background-color: var(--color-orange);
+  transition: all var(--animation-duration) ease-in;
+}
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -101,6 +105,7 @@ p {
   color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {

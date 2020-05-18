@@ -10,3 +10,17 @@ document.addEventListener("scroll", () => {
     navbar.classList.remove("navbar--dark");
   }
 });
+
+// 넷바 메뉴 눌렀을시 원하는 곳 이동
+
+const navbarMenu = document.querySelector(".navbar__menu");
+navbarMenu.addEventListener("click", (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link === null) {
+    return;
+  }
+
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+});
