@@ -15,12 +15,22 @@ document.addEventListener("scroll", () => {
 
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
+  console.log(event);
   const target = event.target;
   const link = target.dataset.link;
   if (link === null) {
     return;
   }
-
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+//Home의 contact me 버튼 클릭시 contact로 이동
+const homeContact = document.querySelector(".home__contact");
+homeContact.addEventListener("click", (event) => {
+  scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
